@@ -1,41 +1,65 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Music Matcher | Home</title>
-    <link rel="stylesheet" href="/css/style.css" />
-    <script src="./js/main.js" type="module"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Gidole&display=swap" rel="stylesheet">
-  </head>
-  <body>
-    <header class="divider" id="main-header"></header>
-    <main>
-      <div class="hero">
-        <div class="hero-container">
-          <h2>Your Music, Your Timeline</h2>
-          <img src="/images/hero.webp" srcset="/images/hero-sm.webp 500w, /images/hero.webp" alt="image of a high mountain lake" />
-          <a id="pngtree-credit" href="https://pngtree.com/freebackground/blue-musical-notes-background_1986629.html"
-             title="free background photos from pngtree.com" target="_blank">free background photos from pngtree.com</a>
-          <a id="call-to-action" class="button" href="/search/" title="Find Music">𝄞 Find Music 𝄞</a>
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Music Matcher | Home</title>
+  <link rel="stylesheet" href="/css/style.css"/>
+  <script src="./js/main.js" type="module"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gidole&display=swap" rel="stylesheet">
+</head>
+<body>
+<header class="divider" id="main-header"></header>
+<main>
+  <div class="hero">
+    <div class="hero-container">
+      <h2>Your Music, Your Timeline</h2>
+      <img src="/images/hero.webp" srcset="/images/hero-sm.webp 500w, /images/hero.webp"
+           alt="image of a high mountain lake"/>
+      <a id="pngtree-credit" href="https://pngtree.com/freebackground/blue-musical-notes-background_1986629.html"
+         title="free background photos from pngtree.com" target="_blank">free background photos from pngtree.com</a>
+      <a id="call-to-action" class="button" href="/search/" title="Find Music">𝄞 Find Music 𝄞</a>
+    </div>
+  </div>
+  <section class="favorites">
+    <h3>Examples</h3>
+    <div class="home-card-container">
+      <section class="card favorite">
+        <h2>Week of February 14, 1987</h2>
+        <div class="favorite-detail">
+          <label>Song:</label>
+          <span>Livin' On A Prayer</span>
+          <label>Artist:</label>
+          <span>Bon Jovi</span>
+          <label>Peaked:</label>
+          <span>1</span>
+          <label>Weeks on Chart:</label>
+          <span>10</span>
         </div>
-      </div>
-      <section class="favorites">
-        <h3>Examples</h3>
-        <div class="home-card-container">
-          <section class="card">
-            <h2>Living on a Prayer - Bon Jovi</h2>
-            <div>placeholder</div>
-          </section>
-          <section class="card">
-            <h2>Hysteria - Def Leppard</h2>
-            <div>placeholder</div>
-          </section>
-        </div>
+        <img src="https://charts-static.billboard.com/img/1986/12/bon-jovi-on5-livinonaprayer-xsz-180x180.jpg" width="180" height="180" alt="Bon Jovi Livin' On A Prayer" loading="lazy"/>
+        <audio controls>
+          <source src="https://cdnt-preview.dzcdn.net/api/1/1/7/c/1/0/7c1d95d2fe6ad479f66d912db049df50.mp3?hdnea=exp=1743560173~acl=/api/1/1/7/c/1/0/7c1d95d2fe6ad479f66d912db049df50.mp3*~data=user_id=0,application_id=42~hmac=549778655df4673fd587bc82bbad2e2fdc48a3208af5608f722e30413fd40a66">
+        </audio>
       </section>
-    </main>
-    <footer></footer>
-  </body>
+      <section class="card favorite">
+        <h2>Week of October 8, 1988</h2>
+        <div class="favorite-detail">
+          <label>Song:</label>
+          <span>Love Bites</span>
+          <label>Artist:</label>
+          <span>Def Leppard</span>
+          <label>Peaked:</label>
+          <span>1</span>
+          <label>Weeks on Chart:</label>
+          <span>9</span>
+        </div>
+        <img src="https://charts-static.billboard.com/img/1980/05/def-leppard-l7m-180x180.jpg" width="180" height="180" alt="Def Leppard Love Bites" loading="lazy"/>
+      </section>
+    </div>
+  </section>
+</main>
+<footer></footer>
+</body>
 </html>

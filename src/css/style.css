@@ -100,23 +100,11 @@ header {
 }
 
 .home-card-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-column-gap: 4em;
-  padding: 0 2em;
-}
-
-.home-card-container ul {
-  padding: 0.5rem;
-  margin-left: 2em;
-}
-
-.home-card-container ul li {
-  padding: 0.5rem 0;
+  padding: 0 2.5em 1em 2.5em;
 }
 
 .card {
-  margin: 0.5rem 0;
+  margin: 2rem 0 0 0;
   border: 1px solid var(--primary-color);
   border-radius: 10px;
   min-height: 10rem;
@@ -136,7 +124,6 @@ header {
 }
 
 .favorites h3 {
-  text-align: center;
   margin: 1.5rem 0 0.5rem 0;
 }
 
@@ -144,18 +131,30 @@ header {
   border-bottom: 2px solid var(--border-color);
 }
 
-@media screen and (min-width: 500px) {
-  body {
-    max-width: 1080px;
-    margin: auto;
-  }
-  .mission {
-    font-size: 1.2em;
-  }
-  .cart-card {
-    font-size: inherit;
-    grid-template-columns: 150px auto 15%;
-  }
+.favorite-detail {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 1rem;
+  row-gap: 0.5rem;
+}
+.favorite-detail label {
+  font-weight: bold;
+  justify-self: right;
+  padding-right: 0.25rem;
+  white-space: nowrap;
+}
+.favorite-detail span {
+  padding-left: 0.25rem;
+  white-space: nowrap;
+}
+
+.favorite img, audio {
+  margin: 0 auto 0.5rem auto;
+  display: block;
+}
+
+.favorite  audio {
+  width: 75%;
 }
 
 footer {
@@ -165,4 +164,23 @@ footer {
 
 .hidden {
   display: none;
+}
+
+@media screen and (min-width: 700px) {
+  body {
+    max-width: 1080px;
+    margin: auto;
+  }
+  .card {
+    margin: 0.5rem 0;
+  }
+  .home-card-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 3em;
+    padding: 0 2.5em;
+  }
+  .favorite  audio {
+    width: 100%;
+  }
 }
