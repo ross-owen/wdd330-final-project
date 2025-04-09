@@ -3,9 +3,6 @@ export function qs(selector, parent = document) {
   return parent.querySelector(selector);
 }
 
-// or a more concise version if you are into that sort of thing:
-// export const qs = (selector, parent = document) => parent.querySelector(selector);
-
 // retrieve data from localstorage
 export function getLocalStorage(key) {
   return JSON.parse(localStorage.getItem(key));
@@ -59,31 +56,6 @@ async function loadTemplate(path) {
   return template;
 }
 
-// Cart count indicator
-export function cartCount(count = 0) {
-  const cartIndicator = document.querySelector("sup");
-  const currentCart = getLocalStorage("so-cart");
-
-  try {
-    // if cart isn't empty...
-    if (currentCart !== null) {
-      // cycle through and count each item
-      currentCart.forEach((i) => {
-        count += parseInt(i.Quantity); // parsing int to prevent leading 0
-      });
-      cartIndicator.classList.add("cart-count");
-      // update html
-      cartIndicator.innerText = count;
-    }
-    if (count <= 0) {
-      cartIndicator.classList.remove("cart-count");
-      cartIndicator.innerText = "";
-    }
-  } catch {
-    console.error("Error in cartCount() if-statement.");
-  }
-}
-
 export async function loadHeaderFooter() {
   const headerTemplate = await loadTemplate("/partials/header.html");
   const footerTemplate = await loadTemplate("/partials/footer.html");
@@ -91,7 +63,6 @@ export async function loadHeaderFooter() {
   const footerElement = document.querySelector("footer");
   renderWithTemplate(headerTemplate, headerElement);
   renderWithTemplate(footerTemplate, footerElement);
-  cartCount();
 }
 
 export function alertMessage(message, scroll = true) {
@@ -112,7 +83,7 @@ export function alertMessage(message, scroll = true) {
   alertImage.src = "/images/alert-icon.svg";
   banner.appendChild(alertImage);
 
-  // add onclick listner and look for clicking of the dismiss image
+  // add onclick listener and look for clicking of the dismiss image
   banner.addEventListener("click", (ev) => {
     if (ev.target.tagName === "IMG") {
       main.removeChild(banner);

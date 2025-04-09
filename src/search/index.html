@@ -14,6 +14,66 @@
 <body>
 <header class="divider" id="main-header"></header>
 <main>
+  <div class="search-card-container">
+    <section class="card">
+      <h2>Pick A Date And Search</h2>
+      <div class="search">
+        <label for="date-input">Date:
+          <input type="date" id="date-input">
+        </label>
+        <button id="search-button">Search</button>
+        <div class="loading-box rotate" id="search-loading">
+          <div class="loading-dot"></div>
+          <div class="loading-dot"></div>
+          <div class="loading-dot"></div>
+          <div class="loading-dot"></div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <h1 id="week-of"></h1>
+  <div id="search-results">
+  </div>
+  <dialog id="song-detail" class="card favorite">
+    <div class="spinner-holder">
+      <div class="loading-box rotate" id="dialog-loading">
+        <div class="loading-dot"></div>
+        <div class="loading-dot"></div>
+        <div class="loading-dot"></div>
+        <div class="loading-dot"></div>
+      </div>
+    </div>
+    <div class="song-detail-wrapper hidden">
+      <h2 id="week">Placeholder</h2>
+      <div class="card-horizontal">
+        <div class="favorite-detail">
+          <label>Song:</label>
+          <span id="title"></span>
+          <label>Artist:</label>
+          <span id="artist"></span>
+          <label>Album:</label>
+          <span id="album"></span>
+          <label>Release Date:</label>
+          <span id="release-date"></span>
+          <label>This Week:</label>
+          <span id="this-week"></span>
+          <label>Last Week:</label>
+          <span id="last-week"></span>
+          <label>Peaked:</label>
+          <span id="peaked-at"></span>
+          <label>Weeks on Chart:</label>
+          <span id="weeks-on-chart"></span>
+        </div>
+        <div id="audio-visual" class="card-horizontal-column">
+          <img id="song-image" src="" alt="Song" />
+          <audio id="play-song" controls></audio>
+        </div>
+      </div>
+      <div class="favorite-button-wrapper">
+        <button id="add-favorite">Add As Favorite</button>
+      </div>
+    </div>
+  </dialog>
 </main>
 <footer></footer>
 </body>
