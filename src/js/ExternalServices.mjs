@@ -1,16 +1,9 @@
+import {convertToJson} from "./utils.mjs";
+
 const billboardUrl = import.meta.env.VITE_BILLBOARD_URL;
 const billboardApiKey = import.meta.env.VITE_BILLBOARD_API_KEY;
 const deezerUrl = import.meta.env.VITE_DEEZER_URL;
 const deezerApiKey = import.meta.env.VITE_DEEZER_API_KEY;
-
-async function convertToJson(res) {
-    const json = await res.json();
-    if (res.ok) {
-        return json;
-    } else {
-        throw {name: "servicesError", message: json};
-    }
-}
 
 export default class ExternalServices {
     constructor() {

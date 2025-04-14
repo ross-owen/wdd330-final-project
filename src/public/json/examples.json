@@ -1,30 +1,32 @@
 ﻿[
   {
-    "search_date": "1987-02-12",
-    "week": "Week of February 14, 1987",
+    "searchDate": "1987-02-12",
+    "weekOf": "Week of February 14, 1987",
     "position": 1,
     "image": "https://charts-static.billboard.com/img/1986/12/bon-jovi-on5-livinonaprayer-xsz-180x180.jpg",
+    "lastWeekPosition": 3,
+    "peakPosition": 1,
+    "weeksOnChart": 10,
+    "trackId": 538660022,
     "name": "Livin' On A Prayer",
     "artist": "Bon Jovi",
-    "track_id": 538660022,
-    "last_week_position": 3,
-    "peak_position": 1,
-    "weeks_on_chart": 10,
     "album": "Slippery When Wet",
-    "release_date": "1998-09-21"
+    "release_date": "1998-09-21",
+    "preview": "https://cdnt-preview.dzcdn.net/api/1/1/1/8/1/0/1817cc366a1460034e5f86a0d711cc37.mp3?hdnea=exp=1744167421~acl=/api/1/1/1/8/1/0/1817cc366a1460034e5f86a0d711cc37.mp3*~data=user_id=0,application_id=42~hmac=0137f2cf0abf3f4c2587c3b327db7743418960ba02d711a9bbb30229198905ae"
   },
   {
-    "search_date": "1988-10-03",
-    "week": "Week of October 8, 1988",
+    "searchDate": "1988-10-03",
+    "weekOf": "Week of October 8, 1988",
     "position": 1,
     "image": "https://charts-static.billboard.com/img/1980/05/def-leppard-l7m-180x180.jpg",
+    "lastWeekPosition": 2,
+    "peakPosition": 1,
+    "weeksOnChart": 9,
+    "trackId": 447552812,
     "name": "Love Bites",
     "artist": "Def Leppard",
-    "track_id": 447552812,
-    "last_week_position": 2,
-    "peak_position": 1,
-    "weeks_on_chart": 9,
     "album": "Hysteria",
-    "release_date": "1987-08-03"
+    "release_date": "1987-08-03",
+    "preview": "https://cdnt-preview.dzcdn.net/api/1/1/1/8/1/0/1817cc366a1460034e5f86a0d711cc37.mp3?hdnea=exp=1744167421~acl=/api/1/1/1/8/1/0/1817cc366a1460034e5f86a0d711cc37.mp3*~data=user_id=0,application_id=42~hmac=0137f2cf0abf3f4c2587c3b327db7743418960ba02d711a9bbb30229198905ae"
   }
 ]
