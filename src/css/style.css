@@ -161,9 +161,10 @@ header {
   margin: 0 auto 0.5rem auto;
   display: block;
 }
-.favorite  audio {
+.favorite audio {
   width: 75%;
 }
+
 button {
   color: var(--light-grey);
   background-color: var(--primary-color);
@@ -192,6 +193,10 @@ button:hover {
 .favorite-detail span {
   padding-left: 0.25rem;
   /*white-space: nowrap;*/
+}
+.favorite-selected {
+  background-color: var(--border-color) !important;
+  color: var(--light-grey) !important;
 }
 
 footer {

@@ -14,7 +14,6 @@ function getRandomSong(items, usedIndex) {
     let index = 0;
 
     while (loop) {
-        counter++;
         index = Math.floor(Math.random() * items.length);
         if (index !== usedIndex) {
             loop = false;

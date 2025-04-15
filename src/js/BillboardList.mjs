@@ -1,14 +1,15 @@
-import {qs, renderListWithTemplate, setClick} from "./utils.mjs";
+import {qs, renderListWithTemplate, getLocalStorage} from "./utils.mjs";
 import ExternalServices from "./ExternalServices.mjs";
 import SongDetails from "./SongDetails.mjs";
 
 const cardClass = 'music-result-card';
 
 function songCardTemplate(song, index) {
+    const isFavorite = this.songs.find(fave => fave.weekOf === this.weekOf && fave.position === song.position);
     return `
     <section class="${cardClass}">
       <input class="index" type="hidden" value="${index}"/>
-      <h3>#${song.position}</h3>
+      <h3 id="position-${song.position}" class="${isFavorite ? 'favorite-selected': ''}">#${song.position}</h3>
       <div class="billboard-detail-holder">
         <div class="billboard-detail">
           <label>Song: <span>${song.name}</span></label>
@@ -30,6 +31,7 @@ export default class BillboardList {
         this.spinnerSelector = spinnerSelector;
         this.dialogSelector = dialogSelector;
         this.dataSource = new ExternalServices();
+        this.favorites = getLocalStorage("favorites") || [];
     }
 
     async search() {
@@ -55,7 +57,12 @@ export default class BillboardList {
     render(date, results) {
         qs(this.headerSelector).innerHTML = results.week;
         const resultsElement = qs(this.listSelector);
-        renderListWithTemplate(songCardTemplate, resultsElement, results.songs);
+
+        const faves = {
+            songs: this.favorites,
+            weekOf: results.week
+        }
+        renderListWithTemplate(songCardTemplate, resultsElement, results.songs, faves);
 
         const cards = resultsElement.getElementsByClassName(cardClass);
         for (let card of cards) {

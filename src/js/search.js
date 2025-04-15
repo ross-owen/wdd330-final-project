@@ -12,9 +12,11 @@ qs('#song-detail').addEventListener('close', (e) => {
 });
 
 qs('#add-favorite').addEventListener('click', (e) => {
+    const song = getLocalStorage(tempSong);
+    qs('#position-' + song.position).classList.toggle('favorite-selected');
     let faves = getLocalStorage(favorites) || [];
     if (e.target.textContent === 'Add Favorite') {
-        faves.push(getLocalStorage(tempSong))
+        faves.push(song)
     } else {
         faves = (getLocalStorage(favorites) || []).filter((f) => f.trackId !== song.trackId);
     }
